@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ngetest Paragraph Change</title>
+    <link rel="stylesheet" href="test.css" type="text/css">
+</head>
+
+<body>
+    <h2 class="heading">Demo JavaScript</h2>
+
+    <p id="demo">A Paragraph.</p>
+    <p id="demo4">Loream Ipsum</p>
+
+    <button type="button" onclick="myFunctionChange()">Try it</button>
+    <button type="button" onclick="myFunctionRevert()">Revert</button>
+</body>
+<script>
+    var x = document.getElementById("demo").textContent;
+    var y = document.getElementById("demo4").textContent;
+
+    function myFunctionChange() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        document.getElementById("demo4").innerHTML = "Loream Ipsum changed.";
+    }
+
+    function myFunctionRevert() {
+        document.getElementById("demo").innerHTML = x;
+        document.getElementById("demo4").innerHTML = y;
+    }
+</script>
+
+</html>
